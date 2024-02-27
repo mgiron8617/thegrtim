@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: NYT;
+    src: url('fonts/Chomsky.otf');
+}
+
+body {
+    margin: 0% 8% 0% 8%;
+}
+
+
+
+/* ---------- */
+/*   header   */
+/* ---------- */
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.logo {
+    font-family: NYT;
+    font-size: 5.7em;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.quote {
+    font-size: .7em;
+    background-color: white;
+    border: .2px solid black;
+    padding: 1.5em;
+    font-family: 'Inria Sans', sans-serif;
+    margin: 5vmin 0vmin;
+    text-align: center;
+}
+
+.date {
+    font-size: 1em;
+    text-align: right;
+    align-self: center;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+
+
+/* ---------- */
+/*   navbar   */
+/* ---------- */
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: .8em;
+    border-top: 1.5px solid rgb(168, 168, 168);
+    border-bottom: 1.5px solid rgb(168, 168, 168);
+    padding: 2px 0px;
+}
+
+.issue {
+    text-align: left;
+    width: 13%;
+    padding: 4.5px;
+}
+
+.price {
+    text-align: right;
+    width: 13%;
+    padding: 4.5px;
+}
+
+.navbar {
+    width: 75%;
+    text-align: center;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-flex;
+    text-decoration: none;
+    padding-left: 6.5%;
+    padding-left: 6.5%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 4.5px;
+}
+
+.active:hover {
+    background-color: rgba(233, 233, 233, 0.567);
+    padding: 4.5px;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bar { 
+    width: 20px;
+    height: 3px;
+    margin: 2px 0;
+    background-color: #000;
+}
+
+.nav-menu {
+    display: none;
+}
+
+
+
+/* ---------- */
+/*   heading  */
+/* ---------- */
+
+.heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-top: 30px;
+}
+
+.sub-heading {
+    font-family: 'Inria Sans', sans-serif;
+    color: #787878;;
+    font-size: .9em;
+    margin-top: 3px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+
+
+/* ---------- */
+/*  repeats   */
+/* ---------- */
+
+.title {
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    font-size: 2em;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.under-title {
+    width: 15%;
+    margin: auto;
+}
+
+.text {
+    font-family: 'Georgia', serif;
+    font-size: .8em;
+    text-indent: 1.25em;
+    text-align: justify;
+    color: #383838;
+}
+.text:first-of-type::first-letter {
+    font-size: 1.5em;
+}
+
+.picture {
+    width: 100%;
+}
+
+.description {
+    font-family: 'Lora', serif;
+    font-size: .9em;
+    width: 100%;
+    color: #383838;
+    text-align: center;
+}
+
+
+
+ /* ---------- */
+/*  endorsements */ 
+ /* ---------- */
+
+.endorsements {
+    display: block;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.row-one, .row-two, .row-three {
+    display: flex;
+    padding: 10px 0px;
+    width: auto;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(228, 227, 227);
+}
+
+/* = row 1 = */
+
+.coach {
+    display: flex;
+    width: 46%;
+}
+.pic-caption-coach {
+    display: block;
+    margin: auto 0;
+    width: 35%;
+}
+.paragraph-coach {
+    column-count: 2;
+    column-gap: 1em;
+    width: 65%;
+    padding: 0px 11px 0px 10px;
+    border-right: 2px solid rgb(228, 227, 227);
+}
+
+.mac {
+    display: flex;
+    width: 54%;
+}
+.pic-caption-mac {
+    display: block;
+    margin: auto 0;
+    width: 50%;
+}
+.paragraph-mac {
+    column-count: 2;
+    column-gap: 1em;
+    width: 50%;
+    padding: 0px 10px 0px 11px;
+}
+
+/* = row 2 = */
+
+.beats {
+    display: flex;
+    width: 55%;
+}
+.pic-caption-beats {
+    display: block;
+    margin: auto 0;
+    width: 49%;
+}
+.paragraph-beats {
+    column-count: 2;
+    column-gap: 1em;
+    width: 51%;
+    padding: 0px 11px 0px 10px;
+    border-right: 2px solid rgb(228, 227, 227);
+}
+
+.final-fantasy {
+    display: flex;
+    width: 45%
+}
+.pic-caption-fantasy {
+    display: block;
+    margin: auto 0;
+    width: 30%;
+}
+.paragraph-fantasy {
+    column-count: 2;
+    column-gap: 1em;
+    width: 70%;
+    padding: 0px 10px 0px 11px;
+}
+
+/* = row 3 = */
+
+.reebok {
+    display: flex;
+    width: 45%;
+}
+.pic-caption-reebok {
+    display: block;
+    margin: auto 0;
+    width: 32%;
+}
+.paragraph-reebok {
+    column-count: 2;
+    column-gap: 1em;
+    width: 68%;
+    padding: 0px 11px 0px 10px;
+    border-right: 2px solid rgb(228, 227, 227);
+}
+
+.starbucks {
+    display: flex;
+    width: 55%
+}
+.pic-caption-starbucks {
+    display: block;
+    margin: auto 0;
+    width: 40%;
+}
+.paragraph-starbucks {
+    column-count: 2;
+    column-gap: 1em;
+    width: 60%;
+    padding: 0px 10px 0px 11px;
+}
+
+/* = row 4 = */
+
+.row-four {
+    display: flex;
+    padding: 10px 0px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.givenchy {
+    display: flex;
+    width: 52%;
+}
+.pic-caption-givenchy {
+    display: block;
+    margin: auto 0;
+    width: 43%;
+}
+.paragraph-givenchy {
+    column-count: 2;
+    column-gap: 1em;
+    width: 57%;
+    padding: 0px 11px 0px 10px;
+    border-right: 2px solid rgb(228, 227, 227);
+}
+
+.fortnite {
+    display: flex;
+    width: 48%
+}
+.pic-caption-fortnite {
+    display: block;
+    margin: auto 0;
+    width: 40%;
+}
+.paragraph-fortnite {
+    column-count: 2;
+    column-gap: 1em;
+    width: 60%;
+    padding: 0px 10px 0px 11px;
+}
+
+
+
+/* ---------- */
+/* fragrances */ 
+/* ---------- */
+
+.fragrances {
+    display: block;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.pics-and-text {
+    display: flex;
+    padding: 10px 0px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+}
+
+.pic-caption-perfume {
+    text-align: center;
+    margin: auto 0;
+    width: 50%;
+}
+
+.paragraph-fragrance {
+    column-count: 4;
+    column-gap: 1em;
+    width: 58%;
+}
+
+
+
+/* ---------- */
+/* r.e.m. beauty */ 
+/* ---------- */
+
+.rembeauty {
+    display: block;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.product-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+}
+
+.pic-caption-cosmetics {
+    text-align: center;
+    margin: auto 0;
+    width: 100%;
+}
+
+.paragraph-rem {
+    column-count: 4;
+    column-gap: 1em;
+    width: 58%;
+}
+
+
+
+/* ---------- */
+/* responsive */
+/* ---------- */
+
+/* NAV BAR AND TITLE ONLY */
+
+@media screen and (max-width: 1230px) {
+    body {
+        margin: 0% 6.7% 0% 6.7%;
+    }
+    .quote {
+        font-size: .6em;
+        padding: 1em;
+    }
+    .logo {
+        font-size: 5em;
+    }
+    .headline h1 {
+        font-size: 3.9em
+    }
+    .headline p {
+        font-size: 1.9em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        font-size: 3.6em;
+    }
+    .headline h1 {
+        font-size: 3em
+    }
+    .headline p {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .quote {
+        font-size: .5em;
+        padding: .9em;
+        width: 90%;
+    }
+    .logo {
+        font-size: 3em;
+    }
+    .date {
+        font-size: .75em;
+    }
+    .options {
+        font-size: .45em;
+    }
+    .navbar {
+        width: 75%;
+    }
+    .headline h1 {
+        font-size: 3em
+    }
+    .headline p {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .logo {
+        font-size: 2.15em;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .logo {
+        font-size: 2.15em;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .quote {
+        display: none;
+    }
+    .date {
+        display: none;
+    }
+    .logo {
+        font-size: 3em;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-link{
+        width: auto;
+        color: #000;
+        text-decoration: none;
+        padding: 4.5px;
+    }
+    .nav-menu.active {
+        display: flex;
+        width: 100%;
+        padding: 1% 0%;
+        justify-content: space-evenly;
+        padding: 0% 2%;
+    }
+    .nav-link:hover {
+        background-color: rgba(233, 233, 233, 0.567);
+        padding: 4.5px;
+        border-radius: 5px;
+    }
+    .issue, .price {
+        padding: 4.5px;
+        width: 50%;
+    }
+    .issue.active, .price.active, .nav-links, .navbar {
+        display: none;
+    }
+    .active:hover {
+        background-color: #fff;
+}
+}
+
+@media screen and (max-width: 437px) {
+    .logo {
+        font-size: 2.8em;
+    }
+    .hamburger {
+        top: 15px;
+        right: 15px;
+    }
+    .bar {
+        width: 20px;
+        height: 3px;
+        margin: 2px 0;
+    }
+    .nav-menu {
+        padding: 3% 0% 2%;
+    }
+    
+}
+
+@media screen and (max-width: 376px) {
+    .logo {
+        font-size: 2.2em;
+    }
+    
+    .hamburger {
+        top: 11px;
+        right: 11px;
+    }
+    
+}
+
+
+
+
+
+/* THE REST */
+
+@media screen and (max-width: 1210px) {
+    .heading {
+        font-size: 2.5em;
+    }
+    .sub-heading {
+        font-size: .8em;
+    }
+    .text {
+        font-size: .75em;
+    }
+    .paragraph-coach, .paragraph-mac, .paragraph-beats, .paragraph-fantasy, .paragraph-reebok, .paragraph-starbucks, .paragraph-givenchy, .paragraph-fortnite {
+        column-count: 2;
+    }
+    .product-images, .collection {
+        width: 16%;
+    }
+    .paragraph-fragrance, .paragraph-rem {
+        column-count: 3;
+        width: 65%;
+    }
+    .description {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .paragraph-coach, .paragraph-mac, .paragraph-beats, .paragraph-fantasy, .paragraph-reebok, .paragraph-starbucks, .paragraph-givenchy, .paragraph-fortnite {
+        column-count: 1;
+    }
+    .paragraph-fragrance, .paragraph-rem {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .row-one, .row-two, .row-three, .row-four {
+        flex-wrap: wrap;
+        display: block;
+        width: 100%;
+        border-bottom: none;
+        padding: 0px;
+    }
+    .coach, .mac, .beats, .final-fantasy, .reebok, .starbucks, .givenchy {
+        width: 100%;
+        padding: 10px 0px;
+        border-bottom: 2px solid rgb(228, 227, 227);
+    }
+    .fortnite {
+        width: 100%;
+        padding: 10px 0px;
+    }
+    .paragraph-coach, .paragraph-beats, .paragraph-reebok, .paragraph-givenchy {
+        column-count: 2;
+        border: none;
+    }
+    .paragraph-mac, .paragraph-fantasy, .paragraph-starbucks, .paragraph-fortnite {
+        column-count: 2;
+    }
+    .title {
+        font-size: 2em;
+    }
+    .text {
+        font-size: .75em;
+    }
+    .pic-caption-coach, .pic-caption-mac, .pic-caption-beats, .pic-caption-fantasy, .pic-caption-reebok, .pic-caption-starbucks, .pic-caption-givenchy, .pic-caption-fortnite {
+        text-align: center;
+    }
+    .description {
+        text-align: center;
+    }
+    .picture {
+        width: 65%;
+    }
+    .pics-and-text {
+        display: block;
+    }
+    .collection, .product-images {
+        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .pic-caption-perfume {
+        width: 25%;
+    }
+    .paragraph-fragrance, .paragraph-rem {
+        width: 100%;
+        padding: 15px 0px;
+        column-count: 4;
+    }
+    .pic-caption-cosmetics {
+        width: 33%
+    }
+}
+
+@media screen and (max-width: 735px) {
+    .title {
+        font-size: 1.75em;
+    }
+    .text {
+        font-size: .7em;
+    }
+    .paragraph-coach, .paragraph-mac, .paragraph-beats, .paragraph-fantasy, .paragraph-reebok, .paragraph-starbucks, .paragraph-givenchy, .paragraph-fortnite {
+        column-count: 2;
+        column-gap: .8em;
+    }
+    .paragraph-fragrance, .paragraph-rem {
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .paragraph-coach, .paragraph-mac, .paragraph-beats, .paragraph-fantasy, .paragraph-reebok, .paragraph-starbucks, .paragraph-givenchy, .paragraph-fortnite {
+        column-count: 1;
+    }
+    .paragraph-fragrance, .paragraph-rem {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .coach, .mac, .beats, .final-fantasy, .reebok, .starbucks, .givenchy, .fortnite {
+        display: block;
+    }
+    .paragraph-coach, .paragraph-mac, .paragraph-beats, .paragraph-fantasy, .paragraph-reebok, .paragraph-starbucks, .paragraph-givenchy, .paragraph-fortnite {
+        width: 100%;
+        column-count: 2;
+    }
+    .pic-caption-coach, .pic-caption-mac, .pic-caption-beats, .pic-caption-fantasy, .pic-caption-reebok, .pic-caption-starbucks, .pic-caption-givenchy, .pic-caption-fortnite {
+        width: 100%;
+        margin: 15px;
+    }
+    .pic-caption-perfume {
+        width: 50%;
+    }
+    .pic-caption-cosmetics {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .paragraph-coach, .paragraph-mac, .paragraph-beats, .paragraph-fantasy, .paragraph-reebok, .paragraph-starbucks, .paragraph-givenchy, .paragraph-fortnite {
+        column-count: 1;
+    }
+    .paragraph-fragrance, .paragraph-rem {
+        column-count: 1;
+    }
+}
